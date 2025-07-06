@@ -1,0 +1,20 @@
+[
+    {
+        "ID": 1005,
+        "Nombre": "Joan",
+        "Anhos": 18,
+        "Contraseña": "2511"
+    },
+    {
+        "ID": 12393,
+        "Nombre": "marcela",
+        "Anhos": 19,
+        "Contraseña": "2511"
+    },
+    {
+        "ID": 19809,
+        "Nombre": "matias",
+        "Anhos": 19,
+        "Contraseña": "2511"
+    }
+]
