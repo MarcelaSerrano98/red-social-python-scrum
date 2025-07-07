@@ -2,6 +2,7 @@ from logica.crearPublicaciones import crear_publicacion
 from logica.registro import agregrar_datos
 from jsons.json_utils import leer_json
 from logica.login import iniciar_sesion
+from logica.listado_de_usuarios import lista
 
 def menu_inicial():
     while True:
@@ -80,5 +81,10 @@ def menu_principal(usuario):
             crear_publicacion(usuario["Nombre"])
         elif opcion == "2":
             print("👋 Regresando...")
-            break
+        elif opcion == "3":
+            print ("Lista de usuarios")                                                                
+            print ("Haz seleccionado ver la lista de usuarios")
+            print ("-----------------------------------------")
+            lista()
+           
         
