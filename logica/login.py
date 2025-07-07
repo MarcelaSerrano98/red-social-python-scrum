@@ -12,7 +12,7 @@ def iniciar_sesion():
     for usuario in usuarios:
         if usuario["Nombre"] == username and usuario["Contraseña"] == password:
             print(f"✅ ¡Inicio exitoso {username}!")
-            return True
+            return usuario
 
     print("❌ Usuario o contraseña incorrectos.")
-    return False
+    return None
