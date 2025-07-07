@@ -1,7 +1,7 @@
 from logica.registro import agregrar_datos
 from jsons.json_utils import leer_json
 from logica.login import iniciar_sesion
-
+from logica.listado_de_usuarios import lista
 
 def menu_inicial():
     while True:
@@ -75,3 +75,12 @@ def menu_principal():
     
 
         opcion = input("Selecciona una opción: ")
+
+        if opcion == "3":
+          
+            print ("Lista de usuarios")                                                                
+            print ("Haz seleccionado ver la lista de usuarios")
+            print ("-----------------------------------------")
+            lista()
+           
+        
