@@ -1,3 +1,4 @@
+from logica.crearPublicaciones import crear_publicacion
 from logica.registro import agregrar_datos
 from jsons.json_utils import leer_json
 from logica.login import iniciar_sesion
@@ -55,15 +56,15 @@ def menu_login():
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
-            if iniciar_sesion() :
-                menu_principal()      
+            usuario = iniciar_sesion()
+            menu_principal(usuario)      
         elif opcion == "2":
             print("👋 Regresando...")
             break
         else:
             print("❌ Opción inválida.")
 
-def menu_principal():
+def menu_principal(usuario):
     while True:
         print("\n===== MENÚ PRINCIPAL =====")
         print("1. Crear publicación")
@@ -76,8 +77,11 @@ def menu_principal():
 
         opcion = input("Selecciona una opción: ")
 
-        if opcion == "3":
-          
+        if opcion == "1":
+            crear_publicacion(usuario["Nombre"])
+        elif opcion == "2":
+            print("👋 Regresando...")
+        elif opcion == "3":
             print ("Lista de usuarios")                                                                
             print ("Haz seleccionado ver la lista de usuarios")
             print ("-----------------------------------------")
