@@ -1,6 +1,7 @@
 from jsons.json_utils import leer_json
-from menu.menus import menu_principal
+from menu.menus import menu_principal, menu_login
 from logica.registro import menu_registro_log
+
 
 DATA_FILE = "savefiles/users.json"
 
@@ -27,7 +28,7 @@ def menu_inicial_log():
         if opcion == "1":
             menu_registro_log()
         elif opcion == "2":
-            iniciar_sesion()
+            menu_login_log()
         elif opcion == "3":
             print("👋 Gracias por usar la red social. ¡Hasta pronto!")
             break
@@ -36,6 +37,7 @@ def menu_inicial_log():
 
 
 def menu_login_log():
+    menu_login()
     while True:
         
         opcion = input("Selecciona una opción: ")
