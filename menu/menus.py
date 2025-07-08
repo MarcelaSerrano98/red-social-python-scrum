@@ -3,6 +3,8 @@ from logica.registro import agregrar_datos
 from jsons.json_utils import leer_json
 from logica.login import iniciar_sesion
 from logica.listado_de_usuarios import lista
+from logica.comentarPublicacion import leer_json_posts
+
 
 def menu_inicial():
     while True:
@@ -70,8 +72,9 @@ def menu_principal(usuario):
         print("1. Crear publicación")
         print("2. Ver publicaciones")
         print("3. Ver usuarios registrados")
-        print("4. Buscar usuarios")
-        print("5. Cerrar sesión")
+        print("4. Interactuar en las publicaciones")
+        print("5. Buscar usuarios")
+        print("6. Cerrar sesión")
     
     
 
@@ -86,5 +89,8 @@ def menu_principal(usuario):
             print ("Haz seleccionado ver la lista de usuarios")
             print ("-----------------------------------------")
             lista()
+        elif opcion == "4":
+            leer_json_posts()
+
            
         
