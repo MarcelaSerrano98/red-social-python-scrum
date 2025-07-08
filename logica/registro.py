@@ -2,21 +2,38 @@ from jsons.json_utils import leer_json, escribir_json
 
 DATA_FILE = "savefiles/users.json"
 
+def try_parse_int(s) -> int : 
+    try:
+        return int(s)
+    except ValueError:
+        return None
+
 def agregrar_datos():
     """Crear datos en el archivo"""
     users = leer_json(DATA_FILE)
-    
-    users_id = int(input("Ingresa tu ID: "))
-    name = input("Ingresa tu nombre: ")
-    age = int(input("Ingresa tu edad (debes ser mayor de edad): "))
-    password = input("Ingresa tu contraseña: ")
+    users_id = try_parse_int(input("Ingresa tu ID: "))
+    try:
+        ##users_id = int(input("Ingresa tu ID: "))
+        name = input("Ingresa tu nombre: ")
+        age = int(input("Ingresa tu edad (debes ser mayor de edad): "))
+        password = input("Ingresa tu contraseña: ")
 
+    except ValueError:
+        print (".....ERROR (Dato mal ingresado, intenta nuevamente).....")
+        return
+    
     if age < 18:
         print("❌ Debes ser mayor de edad para registrarte.")
         return
 
     if any(user["ID"] == users_id for user in users):
         print("❌ El ID ya está registrado. Usa uno diferente.")
+        return
+    
+    if len(str(users_id)) == 5 :
+        print ("ID registrado 😄")
+    else:
+        print("❌ Tu ID debe tener unicamente 5 digitos")
         return
 
     users.append({
