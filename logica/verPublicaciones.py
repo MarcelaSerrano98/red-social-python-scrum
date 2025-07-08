@@ -10,8 +10,8 @@ def ver_publicaciones():
 
     print("\n===== HISTORIAS PUBLICADAS =====\n")
 
-    for i,pub in enumerate(publicaciones):
-        print(f"{i+1}.")
+    for pub in publicaciones:
+        print(f"{pub['id']}.")
         print(f"👤 Usuario: {pub['usuario']}")
         print(f"📘 Libro: {pub['libro']}")
         print(f"📝 Reseña: {pub['reseña']}")
