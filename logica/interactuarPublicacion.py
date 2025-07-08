@@ -36,7 +36,7 @@ def dar_like_publicacion(id_pub):
 
 def interactuar_pub():
     ver_publicaciones()
-    num_pub= int(input("Seleccione el número de la publicación para interactuar: "))
+    num_pub= int(input("Seleccione el número de la publicación con la que desea interactuar: "))
 
     posts = leer_json(ruta_posts)
     for post in posts:

@@ -69,36 +69,38 @@ def menu_login():
 def menu_principal(usuario):
     while True:
         print("\n===== MENÚ PRINCIPAL =====")
-        print("1. Crear publicación")
-        print("2. Ver publicaciones")
-        print("3. Ver mis publicaciones")
-        print("3. Ver usuarios registrados")
-        print("4. Interactuar en las publicaciones")
-        print("5. Buscar usuarios")
-        print("6. Cerrar sesión")
+        print("1. Mi perfil")
+        print("2. Crear publicación")
+        print("3. Ver publicaciones")
+        print("4. Ver usuarios registrados")
+        print("5. Interactuar en las publicaciones")
+        print("6. Buscar usuarios")
+        print("7. Cerrar sesión")
     
     
 
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
-            crear_publicacion(usuario["Nombre"])
-        elif opcion == "2":
-            ver_publicaciones()
-        elif opcion == "3": 
             ver_perfil(usuario)
+            
+        elif opcion == "2":
+            crear_publicacion(usuario["Nombre"])
+            
+        elif opcion == "3": 
+            ver_publicaciones()
+
         elif opcion == "4":
-            print ("Lista de usuarios")                                                                
-            print ("Haz seleccionado ver la lista de usuarios")
-            print ("-----------------------------------------")
             lista()
         elif opcion == "5":
-            print ("Lista de usuarios")                                                                
-            print ("-"*50)
-            lista()
-        elif opcion == "4":
             from logica.interactuarPublicacion import interactuar_pub
             interactuar_pub()
+        elif opcion == "6":
+            pass
+        elif opcion == "7":
+            print("Que vuelvas pronto🚪")
+            break
+            
             
 
 
