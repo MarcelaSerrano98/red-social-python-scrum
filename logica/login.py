@@ -14,11 +14,14 @@ def iniciar_sesion():
 
     for usuario in usuarios:
         if usuario["Nombre"] == username and usuario["Contraseña"] == password:
-            print(f"✅ ¡Inicio exitoso {username}!")
+            print(f"✅ ¡Inicio exitoso {username}!") 
             return usuario
 
     print("❌ Usuario o contraseña incorrectos.")
-    return None
+    return
+
+    
+    
 
 def menu_inicial_log():
     from menu.menus import menu_inicial, menu_registro, menu_login
@@ -37,14 +40,14 @@ def menu_inicial_log():
 
 
 def menu_login_log():
-    menu_login()
     while True:
-        
+        menu_login()
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
             usuario = iniciar_sesion()
-            menu_principal(usuario)      
+            if usuario:
+                menu_principal(usuario)
         elif opcion == "2":
             print("👋 Regresando...")
             break
