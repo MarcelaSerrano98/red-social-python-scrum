@@ -28,3 +28,23 @@ def agregrar_datos():
 
     escribir_json(DATA_FILE, users)
     print("✅ Usuario creado correctamente.")
+
+def menu_registro_log():
+    from menu.menus import menu_registro 
+    while True:
+        menu_registro()
+        
+        opcion = input("Selecciona una opción: ")
+
+        if opcion == "1":
+            agregrar_datos()
+        elif opcion == "2":
+            usuarios = leer_json(DATA_FILE)
+            print("\nUsuarios registrados:")
+            for usuario in usuarios:
+                print(f"ID: {usuario['ID']}, Nombre: {usuario['Nombre']}, Edad: {usuario['Anhos']}")
+        elif opcion == "3":
+            print("👋 Saliendo del menú de registro...")
+            break
+        else:
+            print("❌ Opción inválida. Intenta de nuevo.")
