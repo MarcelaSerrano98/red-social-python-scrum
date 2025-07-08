@@ -1,9 +1,8 @@
 from logica.crearPublicaciones import crear_publicacion
-from logica.registro import agregrar_datos
-from jsons.json_utils import leer_json
 from logica.listado_de_usuarios import lista
 from logica.verPublicaciones import ver_publicaciones
 from logica.misPublicaciones import ver_perfil
+from logica.login import *
 
 def menu_inicial():
         print("1. Registrarse")
@@ -58,7 +57,12 @@ def menu_principal(usuario):
         elif opcion == "6":
             pass
         elif opcion == "7":
-            print("Que vuelvas pronto🚪")
+            from logica.login import cerrar_sesion
+            cerrar_sesion()
+            continue
+                               
+        else:
+            print("❌ Opción inválida. Intenta de nuevo.")
             break
             
             
@@ -68,10 +72,4 @@ def menu_interactuar():
     print("1. Comentar")
     print("2. Dar like")
     print("3. Volver al menu anterior")
-        
-        
-    
-def menu_cerrar_sesion():
-    print()
-           
         

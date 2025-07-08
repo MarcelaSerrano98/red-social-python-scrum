@@ -50,3 +50,15 @@ def menu_login_log():
             break
         else:
             print("❌ Opción inválida.")
+
+def cerrar_sesion():
+    print("1. Cerrar sesion")
+    print("2. Cancelar")
+    opcion_cierre = input("Ingresa la opcion que desees: ")
+    if opcion_cierre == "1":
+        print("\nQue regreses pronto 🚪")
+        print("🔒 Sesión cerrada. Regresando al menú principal...\n")
+        return menu_inicial_log()
+    elif opcion_cierre == "2":
+        print("🔁 Cancelado. Sigues en sesión.")
+
