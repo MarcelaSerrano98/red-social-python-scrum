@@ -3,12 +3,9 @@ from logica.registro import agregrar_datos
 from jsons.json_utils import leer_json
 from logica.login import iniciar_sesion
 from logica.listado_de_usuarios import lista
-<<<<<<< HEAD
-from logica.comentarPublicacion import leer_json_posts
-
-=======
 from logica.verPublicaciones import ver_publicaciones
->>>>>>> main
+
+
 
 def menu_inicial():
     while True:
@@ -88,15 +85,26 @@ def menu_principal(usuario):
             crear_publicacion(usuario["Nombre"])
         elif opcion == "2":
             ver_publicaciones()
-        elif opcion == "3": 
-            print("👋 Regresando...")
         elif opcion == "3":
-            print ("Lista de usuarios")                                                                
             print ("Haz seleccionado ver la lista de usuarios")
-            print ("-----------------------------------------")
+            print ("-"*50)
+            print ("Lista de usuarios")                                                                
+            print ("-"*50)
             lista()
         elif opcion == "4":
-            leer_json_posts()
+            from logica.interactuarPublicacion import interactuar_pub
+            interactuar_pub()
+            
+
+
+def menu_interactuar():
+    print("\n===== INTERACTUAR CON PUBLICACIONES =====")
+    print("1. Comentar")
+    print("2. Dar like")
+    print("3. Volver al menu anterior")
+        
+        
+    
 
            
         
