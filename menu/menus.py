@@ -2,7 +2,8 @@ from logica.crearPublicaciones import crear_publicacion
 from logica.listado_de_usuarios import lista
 from logica.verPublicaciones import ver_publicaciones
 from logica.misPublicaciones import ver_perfil
-from logica.login import *
+from logica.visualizar_perfil_usuarios import visualizar_perfil_usuarios
+
 
 def menu_inicial():
         print("1. Registrarse")
@@ -55,7 +56,7 @@ def menu_principal(usuario):
             from logica.interactuarPublicacion import interactuar_pub
             interactuar_pub()
         elif opcion == "6":
-            pass
+            visualizar_perfil_usuarios()
         elif opcion == "7":
             from logica.login import cerrar_sesion
             cerrar_sesion()
