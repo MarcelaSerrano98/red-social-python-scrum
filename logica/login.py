@@ -7,8 +7,8 @@ DATA_FILE = "savefiles/users.json"
 
 def iniciar_sesion():
     print("\n===== INICIAR SESIÓN =====")
-    username = input("Nombre de usuario: ")
-    password = input("Contraseña: ")
+    username = input("👤 Nombre de usuario: ")
+    password = input("🔒 Contraseña: ")
 
     usuarios = leer_json(DATA_FILE)
 
@@ -26,6 +26,7 @@ def iniciar_sesion():
 def menu_inicial_log():
     from menu.menus import menu_inicial, menu_registro, menu_login
     while True:
+        print("✨=== BIENVENIDO A LA RED SOCIAL SNAPBOOK===✨")
         menu_inicial()
         opcion = input("Selecciona una opción: ")
         if opcion == "1":

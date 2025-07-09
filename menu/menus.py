@@ -8,36 +8,39 @@ from logica.visualizar_perfil_usuarios import visualizar_perfil_usuarios
 
 
 def menu_inicial():
-        print("1. Registrarse")
-        print("2. Iniciar sesión")
-        print("3. Salir")
+        print("="*50)
+        print("1. 📝 Registrarse")
+        print("2. 🔐 Iniciar sesión")
+        print("3. 🚪 Salir")
+        print("="*50)
+
 
 
 DATA_FILE = "savefiles/users.json"
 
 def menu_registro():
         print("\n===== MENÚ DE REGISTRO DE USUARIO =====")
-        print("1. Registrar nuevo usuario")
-        print("2. Ver todos los usuarios")
-        print("3. Salir")
+        print("1. 👤 Registrar nuevo usuario")
+        print("2. 📋 Ver todos los usuarios")
+        print("3. 🔙 Volver menú anterior")
 
 def menu_login():
          
-         print("\n===== MENÚ DE LOGIN =====")
-         print("1. Iniciar sesión")
-         print("2. Volver al menú anterior")
+         print("\n🔐===== MENÚ DE LOGIN =====🔐")
+         print("1. 🔑 Iniciar sesión")
+         print("2. 🔙 Volver al menú anterior")
 
 
 def menu_principal(usuario):
     while True:
-        print("\n===== MENÚ PRINCIPAL =====")
-        print("1. Mi perfil")
-        print("2. Crear publicación")
-        print("3. Ver publicaciones")
-        print("4. Ver usuarios registrados")
-        print("5. Interactuar en las publicaciones")
-        print("6. Buscar usuarios")
-        print("7. Cerrar sesión")
+        print("\n===== 📱 MENÚ PRINCIPAL 📱 =====")
+        print("1. 👤 Mi perfil")
+        print("2. ✍️  Crear publicación")
+        print("3. 📰 Ver publicaciones")
+        print("4. 📋 Ver usuarios registrados")
+        print("5. 💬 Interactuar en las publicaciones")
+        print("6. 🔍 Buscar usuarios")
+        print("7. 🚪 Cerrar sesión")
     
     
 
@@ -67,9 +70,9 @@ def menu_principal(usuario):
 
 def menu_interactuar():
     print("\n===== INTERACTUAR CON PUBLICACIONES =====")
-    print("1. Comentar")
-    print("2. Dar like")
-    print("3. Volver al menu anterior")
+    print("1. ✏️  Comentar")
+    print("2. 👍 Dar like")
+    print("3. 🔙 Volver al menu anterior")
         
         
     
