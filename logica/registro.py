@@ -14,24 +14,24 @@ def agregrar_datos():
     users_id = try_parse_int(input("Ingresa tu ID: "))
     try:
         ##users_id = int(input("Ingresa tu ID: "))
-        name = input("Ingresa tu nombre: ")
-        age = int(input("Ingresa tu edad (debes ser mayor de edad): "))
-        password = input("Ingresa tu contraseña: ")
+        name = input("👤 Ingresa tu nombre: ")
+        age = int(input("🎂 Ingresa tu edad (debes ser mayor de edad): "))
+        password = input("🔒 Ingresa tu contraseña: ")
 
     except ValueError:
-        print (".....ERROR (Dato mal ingresado, intenta nuevamente).....")
+        print ("❌.....ERROR (Dato mal ingresado, intenta nuevamente).....")
         return
     
     if age < 18:
-        print("❌ Debes ser mayor de edad para registrarte.")
+        print("🚫 Debes ser mayor de edad para registrarte.")
         return
 
     if any(user["ID"] == users_id for user in users):
-        print("❌ El ID ya está registrado. Usa uno diferente.")
+        print("⚠️ El ID ya está registrado. Usa uno diferente.")
         return
     
     if len(str(users_id)) == 5 :
-        print ("ID registrado 😄")
+        print ("✅ID registrado 😄")
     else:
         print("❌ Tu ID debe tener unicamente 5 digitos")
         return
@@ -44,7 +44,7 @@ def agregrar_datos():
     })
 
     escribir_json(DATA_FILE, users)
-    print("✅ Usuario creado correctamente.")
+    print("✅🎉 Usuario creado correctamente.")
 
 def menu_registro_log():
     from menu.menus import menu_registro 
@@ -57,7 +57,7 @@ def menu_registro_log():
             agregrar_datos()
         elif opcion == "2":
             usuarios = leer_json(DATA_FILE)
-            print("\nUsuarios registrados:")
+            print("\n📋 Usuarios registrados:")
             for usuario in usuarios:
                 print(f"ID: {usuario['ID']}, Nombre: {usuario['Nombre']}, Edad: {usuario['Anhos']}")
         elif opcion == "3":

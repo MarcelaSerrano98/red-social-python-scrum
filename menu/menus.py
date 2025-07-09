@@ -37,7 +37,7 @@ def menu_principal(usuario):
         print("1. 👤 Mi perfil")
         print("2. ✍️  Crear publicación")
         print("3. 📰 Ver publicaciones")
-        print("4. Editar mis publicaciones")
+        print("4. 🛠️  Editar mis publicaciones")
         print("5. 📋 Ver usuarios registrados")
         print("6. 💬 Interactuar en las publicaciones")
         print("7. 🔍 Buscar usuarios")

@@ -8,11 +8,11 @@ ruta_posts= "savefiles/posts.json"
 
 def comentar_publicacion(id_pub):
     comentarios_posts = leer_json(ruta_posts)
-    print("Escogiste comentar Publicacion")
+    print("💬 Escogiste comentar Publicacion")
     for post in comentarios_posts:
         if post['id'] == id_pub:
-            usuario = input("¿Cuál es tu nombre de usuario? ")
-            comentario = input("Escribe tu comentario: ")
+            usuario = input("👤 ¿Cuál es tu nombre de usuario? ")
+            comentario = input("📝 Escribe tu comentario: ")
             
             # Agregar el comentario como diccionario
             post['comentarios'].append({
@@ -28,7 +28,7 @@ def dar_like_publicacion(id_pub):
     for post in like_posts:
         if post['id'] == id_pub:
             post['likes'] += 1
-            print(f"¡Le diste like a la publicación de {post['usuario']}! Ahora tiene {post['likes']} ❤️")
+            print(f"👍 ¡Le diste like a la publicación de {post['usuario']}! Ahora tiene {post['likes']} ❤️")
             break
 
     escribir_json(ruta_posts, like_posts)
@@ -36,7 +36,7 @@ def dar_like_publicacion(id_pub):
 
 def interactuar_pub():
     ver_publicaciones()
-    num_pub= int(input("Seleccione el número de la publicación con la que desea interactuar: "))
+    num_pub= int(input("📌 Seleccione el número de la publicación con la que desea interactuar: "))
 
     posts = leer_json(ruta_posts)
     for post in posts:

@@ -28,7 +28,7 @@ def menu_inicial_log():
     while True:
         print("✨=== BIENVENIDO A LA RED SOCIAL SNAPBOOK===✨")
         menu_inicial()
-        opcion = input("Selecciona una opción: ")
+        opcion = input("📌 Selecciona una opción: ")
         if opcion == "1":
             menu_registro_log()
         elif opcion == "2":
@@ -43,7 +43,7 @@ def menu_inicial_log():
 def menu_login_log():
     while True:
         menu_login()
-        opcion = input("Selecciona una opción: ")
+        opcion = input("📌 Selecciona una opción: ")
 
         if opcion == "1":
             usuario = iniciar_sesion()

@@ -12,10 +12,10 @@ def editar_publicacion(nombre_usuario):
 
     print("\n📝 Tus publicaciones:")
     for i, pub in enumerate(publicaciones_usuario, 1):
-        print(f"{i}. Libro: {pub['libro']}\n   Reseña: {pub['reseña']}\n")
+        print(f"{i}. 📚 Libro: {pub['libro']}\n   📝 Reseña: {pub['reseña']}\n")
 
     try:
-        seleccion = int(input("Selecciona el número de la publicación que deseas editar: "))
+        seleccion = int(input("📌 Selecciona el número de la publicación que deseas editar: "))
         if seleccion < 1 or seleccion > len(publicaciones_usuario):
             print("❌ Selección inválida.")
             return
@@ -25,16 +25,16 @@ def editar_publicacion(nombre_usuario):
 
     publicacion_objetivo = publicaciones_usuario[seleccion - 1]
 
-    print("\n¿Qué deseas editar?")
-    print("1. Título del libro")
-    print("2. Reseña")
-    opcion = input("Elige una opción: ")
+    print("\n🛠️ ¿Qué deseas editar?")
+    print("1. 📖 Título del libro")
+    print("2. ✏️ Reseña")
+    opcion = input("📌 Elige una opción: ")
 
     if opcion == "1":
-        nuevo_libro = input("Nuevo título del libro: ")
+        nuevo_libro = input("📖 Nuevo título del libro: ")
         publicacion_objetivo["libro"] = nuevo_libro
     elif opcion == "2":
-        nueva_resena = input("Nueva reseña: ")
+        nueva_resena = input("✏️ Nueva reseña: ")
         publicacion_objetivo["reseña"] = nueva_resena
     else:
         print("❌ Opción no válida.")

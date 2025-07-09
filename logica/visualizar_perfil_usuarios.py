@@ -8,11 +8,11 @@ DATA_FILE2 = "savefiles/users.json"
 
 def visualizar_perfil_usuarios():
     lista()
-    print("Que perfil deseas ver?")
+    print("🔍 Que perfil deseas ver?")
     publicaciones = leer_json(DATA_FILE)
     usuarios_perfil = leer_json(DATA_FILE2)
 
-    perfil_nombre = input("Ingrese el nombre: ")
+    perfil_nombre = input("✏️ Ingrese el nombre: ")
 
     encontrado = False
     for usuario in usuarios_perfil:
@@ -34,7 +34,7 @@ def visualizar_perfil_usuarios():
     publicaciones_usuario = [p for p in publicaciones if p["usuario"] == perfil_nombre]
 
     if publicaciones_usuario:
-        print(f"           PUBLICACIONES DE {perfil_nombre.upper()}   ")
+        print(f"          📰 PUBLICACIONES DE {perfil_nombre.upper()}   ")
         print("="*50)
         for pub in publicaciones_usuario:
             print(f"📘 Libro: {pub['libro']}")

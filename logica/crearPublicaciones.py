@@ -24,6 +24,6 @@ def crear_publicacion(nombre_usuario):
     publicaciones.append(nueva_reseña)
     escribir_json(archivo, publicaciones)
 
-    print("✅ ¡Tu reseña fue publicada!")
+    print("✅ ¡Tu reseña fue publicada! 📝")
 
 
