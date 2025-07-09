@@ -56,13 +56,14 @@ def menu_login_log():
             print("❌ Opción inválida.")
 
 def cerrar_sesion():
-    print("1. Cerrar sesion")
-    print("2. Cancelar")
-    opcion_cierre = input("Ingresa la opcion que desees: ")
+    print("🔒 ===== MENÚ DE CIERRE DE SESIÓN =====")
+    print("1. 🚪 Cerrar sesion")
+    print("2. 🔁 Cancelar")
+    opcion_cierre = input("📌 Ingresa la opcion que desees: ")
 
     if opcion_cierre == "1":
         print("\nQue regreses pronto 🚪")
-        print("🔒 Sesión cerrada. Regresando al menú principal...\n")
+        print("🔒✅ Sesión cerrada. Regresando al menú principal...\n")
         return True  # Devuelve True para indicar que se cerró la sesión
     elif opcion_cierre == "2":
         print("🔁 Cancelado. Sigues en sesión.")
