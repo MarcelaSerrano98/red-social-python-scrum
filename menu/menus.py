@@ -49,24 +49,41 @@ def menu_principal(usuario):
 
         if opcion == "1":
             ver_perfil(usuario)
+            input("👉 Pulsa ENTER para continuar")
             
         elif opcion == "2":
             crear_publicacion(usuario["Nombre"])
+            input("👉 Pulsa ENTER para continuar")
+
             
         elif opcion == "3": 
             ver_publicaciones()
+            input("👉 Pulsa ENTER para continuar")
+
         elif opcion == "4": 
             editar_publicacion(usuario["Nombre"])
+            input("👉 Pulsa ENTER para continuar")
+
         elif opcion == "5":
             lista()
+            input("👉 Pulsa ENTER para continuar")
+
         elif opcion == "6":
             from logica.interactuarPublicacion import interactuar_pub
             interactuar_pub()
+            input("👉 Pulsa ENTER para continuar")
+
         elif opcion == "7":
             visualizar_perfil_usuarios()
+            input("👉 Pulsa ENTER para continuar")
+
         elif opcion == "8":
             print("Que vuelvas pronto🚪")
             break
+        else:
+            print("🚫 Opcion invañida: Debe ser un numero del 1 al 8")
+            input("👉 Pulsa ENTER para continuar")
+
             
             
 
