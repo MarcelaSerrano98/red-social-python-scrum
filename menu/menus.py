@@ -1,10 +1,10 @@
 from logica.crearPublicaciones import crear_publicacion
-from logica.registro import agregrar_datos
-from jsons.json_utils import leer_json
+from logica.editarMisPublicaciones import editar_publicacion
 from logica.listado_de_usuarios import lista
 from logica.verPublicaciones import ver_publicaciones
 from logica.misPublicaciones import ver_perfil
 from logica.visualizar_perfil_usuarios import visualizar_perfil_usuarios
+from logica.editarMisPublicaciones import editar_publicacion
 
 
 def menu_inicial():
@@ -34,10 +34,11 @@ def menu_principal(usuario):
         print("1. Mi perfil")
         print("2. Crear publicación")
         print("3. Ver publicaciones")
-        print("4. Ver usuarios registrados")
-        print("5. Interactuar en las publicaciones")
-        print("6. Buscar usuarios")
-        print("7. Cerrar sesión")
+        print("4. Editar mis publicaciones")
+        print("5. Ver usuarios registrados")
+        print("6. Interactuar en las publicaciones")
+        print("7. Buscar usuarios")
+        print("8. Cerrar sesión")
     
     
 
@@ -51,15 +52,16 @@ def menu_principal(usuario):
             
         elif opcion == "3": 
             ver_publicaciones()
-
-        elif opcion == "4":
-            lista()
+        elif opcion == "4": 
+            editar_publicacion(usuario["Nombre"])
         elif opcion == "5":
+            lista()
+        elif opcion == "6":
             from logica.interactuarPublicacion import interactuar_pub
             interactuar_pub()
-        elif opcion == "6":
-            visualizar_perfil_usuarios()
         elif opcion == "7":
+            visualizar_perfil_usuarios()
+        elif opcion == "8":
             print("Que vuelvas pronto🚪")
             break
             
@@ -76,4 +78,3 @@ def menu_interactuar():
 def menu_cerrar_sesion():
     print()
            
-        
