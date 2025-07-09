@@ -1,4 +1,6 @@
 from jsons.json_utils import leer_json, escribir_json
+from logica.limpiarConsola import limpiarConsola
+
 
 DATA_FILE = "savefiles/users.json"
 
@@ -49,19 +51,27 @@ def agregrar_datos():
 def menu_registro_log():
     from menu.menus import menu_registro 
     while True:
+        limpiarConsola()
         menu_registro()
-        
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
+            limpiarConsola()
             agregrar_datos()
+            input("👉 Pulsa ENTER para continuar")
+            
         elif opcion == "2":
+            limpiarConsola()
             usuarios = leer_json(DATA_FILE)
             print("\n📋 Usuarios registrados:")
             for usuario in usuarios:
                 print(f"ID: {usuario['ID']}, Nombre: {usuario['Nombre']}, Edad: {usuario['Anhos']}")
+            input("👉 Pulsa ENTER para continuar")
+   
         elif opcion == "3":
             print("👋 Saliendo del menú de registro...")
+            input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
             break
         else:
             print("❌ Opción inválida. Intenta de nuevo.")

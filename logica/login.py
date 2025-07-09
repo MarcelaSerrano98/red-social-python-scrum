@@ -1,6 +1,8 @@
 from jsons.json_utils import leer_json
 from menu.menus import menu_principal, menu_login
 from logica.registro import menu_registro_log
+from logica.limpiarConsola import limpiarConsola
+
 
 
 DATA_FILE = "savefiles/users.json"
@@ -22,14 +24,19 @@ def iniciar_sesion():
 
 def menu_inicial_log():
     from menu.menus import menu_inicial, menu_registro, menu_login
+    limpiarConsola()
     while True:
         print("✨=== BIENVENIDO A LA RED SOCIAL SNAPBOOK===✨")
         menu_inicial()
         opcion = input("📌 Selecciona una opción: ")
         if opcion == "1":
+            limpiarConsola()
             menu_registro_log()
+            
         elif opcion == "2":
+            limpiarConsola()
             menu_login_log()
+            
         elif opcion == "3":
             print("👋 Gracias por usar la red social. ¡Hasta pronto!")
             break
@@ -38,19 +45,23 @@ def menu_inicial_log():
 
 
 def menu_login_log():
+    limpiarConsola()
     while True:
         menu_login()
         opcion = input("📌 Selecciona una opción: ")
 
         if opcion == "1":
+            limpiarConsola()
             usuario = iniciar_sesion()
             if usuario:
+                limpiarConsola()
                 menu_principal(usuario)
                 """ Cuando menu_principal termina (porque se cerró sesión),"""
                 """ rompemos el bucle del menú de login para volver al menú inicial. """
                 break 
         elif opcion == "2":
             print("👋 Regresando...")
+            limpiarConsola()
             break
         else:
             print("❌ Opción inválida.")
@@ -64,9 +75,13 @@ def cerrar_sesion():
     if opcion_cierre == "1":
         print("\nQue regreses pronto 🚪")
         print("🔒✅ Sesión cerrada. Regresando al menú principal...\n")
+        limpiarConsola()
+
         return True  # Devuelve True para indicar que se cerró la sesión
     elif opcion_cierre == "2":
         print("🔁 Cancelado. Sigues en sesión.")
+        limpiarConsola()
+
         return False # Devuelve False para indicar que se canceló
     else:
         print("❌ Opción inválida. No se cerrará la sesión.")

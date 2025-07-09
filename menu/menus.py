@@ -5,6 +5,8 @@ from logica.verPublicaciones import ver_publicaciones
 from logica.misPublicaciones import ver_perfil
 from logica.visualizar_perfil_usuarios import visualizar_perfil_usuarios
 from logica.editarMisPublicaciones import editar_publicacion
+from logica.limpiarConsola import limpiarConsola
+
 
 
 def menu_inicial():
@@ -50,41 +52,57 @@ def menu_principal(usuario):
         if opcion == "1":
             ver_perfil(usuario)
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
             
         elif opcion == "2":
             crear_publicacion(usuario["Nombre"])
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
 
             
         elif opcion == "3": 
             ver_publicaciones()
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
+            
 
         elif opcion == "4": 
             editar_publicacion(usuario["Nombre"])
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
+
 
         elif opcion == "5":
             lista()
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
+
 
         elif opcion == "6":
             from logica.interactuarPublicacion import interactuar_pub
             interactuar_pub()
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
+
 
         elif opcion == "7":
             visualizar_perfil_usuarios()
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
+
 
         elif opcion == "8":
             from logica.login import cerrar_sesion
             # Si cerrar_sesion() devuelve True, rompemos el bucle del menu_principal
             if cerrar_sesion():
                 break
+            
+
         else:
             print("🚫 Opcion invañida: Debe ser un numero del 1 al 8")
             input("👉 Pulsa ENTER para continuar")
+            limpiarConsola()
+
 
 
 def menu_interactuar():
