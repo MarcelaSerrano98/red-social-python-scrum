@@ -62,10 +62,10 @@ def menu_principal(usuario):
         elif opcion == "7":
             visualizar_perfil_usuarios()
         elif opcion == "8":
-            print("Que vuelvas pronto🚪")
-            break
-            
-            
+            from logica.login import cerrar_sesion
+            # Si cerrar_sesion() devuelve True, rompemos el bucle del menu_principal
+            if cerrar_sesion():
+                break
 
 def menu_interactuar():
     print("\n===== INTERACTUAR CON PUBLICACIONES =====")
@@ -73,8 +73,3 @@ def menu_interactuar():
     print("2. Dar like")
     print("3. Volver al menu anterior")
         
-        
-    
-def menu_cerrar_sesion():
-    print()
-           

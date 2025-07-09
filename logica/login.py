@@ -20,9 +20,6 @@ def iniciar_sesion():
     print("❌ Usuario o contraseña incorrectos.")
     return
 
-    
-    
-
 def menu_inicial_log():
     from menu.menus import menu_inicial, menu_registro, menu_login
     while True:
@@ -48,8 +45,27 @@ def menu_login_log():
             usuario = iniciar_sesion()
             if usuario:
                 menu_principal(usuario)
+                """ Cuando menu_principal termina (porque se cerró sesión),"""
+                """ rompemos el bucle del menú de login para volver al menú inicial. """
+                break 
         elif opcion == "2":
             print("👋 Regresando...")
             break
         else:
             print("❌ Opción inválida.")
+
+def cerrar_sesion():
+    print("1. Cerrar sesion")
+    print("2. Cancelar")
+    opcion_cierre = input("Ingresa la opcion que desees: ")
+
+    if opcion_cierre == "1":
+        print("\nQue regreses pronto 🚪")
+        print("🔒 Sesión cerrada. Regresando al menú principal...\n")
+        return True  # Devuelve True para indicar que se cerró la sesión
+    elif opcion_cierre == "2":
+        print("🔁 Cancelado. Sigues en sesión.")
+        return False # Devuelve False para indicar que se canceló
+    else:
+        print("❌ Opción inválida. No se cerrará la sesión.")
+        return False
