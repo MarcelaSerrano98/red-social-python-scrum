@@ -78,14 +78,14 @@ def menu_principal(usuario):
             input("👉 Pulsa ENTER para continuar")
 
         elif opcion == "8":
-            print("Que vuelvas pronto🚪")
-            break
+            from logica.login import cerrar_sesion
+            # Si cerrar_sesion() devuelve True, rompemos el bucle del menu_principal
+            if cerrar_sesion():
+                break
         else:
             print("🚫 Opcion invañida: Debe ser un numero del 1 al 8")
             input("👉 Pulsa ENTER para continuar")
 
-            
-            
 
 def menu_interactuar():
     print("\n===== INTERACTUAR CON PUBLICACIONES =====")
@@ -94,7 +94,5 @@ def menu_interactuar():
     print("3. 🔙 Volver al menu anterior")
         
         
-    
-def menu_cerrar_sesion():
-    print()
+
            
