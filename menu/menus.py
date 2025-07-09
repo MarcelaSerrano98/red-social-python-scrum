@@ -59,8 +59,9 @@ def menu_principal(usuario):
             visualizar_perfil_usuarios()
         elif opcion == "7":
             from logica.login import cerrar_sesion
-            cerrar_sesion()
-            continue
+            """" Si cerrar_sesion() devuelve True, rompemos el bucle del menu_principal """
+            if cerrar_sesion():
+                break
                                
         else:
             print("❌ Opción inválida. Intenta de nuevo.")
